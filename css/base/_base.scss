@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap");
+
+body {
+  font-family: $mainFont;
+  background-image: url("./images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body,
+a {
+  color: #fff;
+}
+
+header {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  img {
+    height: 90%;
+  }
+}
+
+main {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  img {
+    height: 70%;
+  }
+}

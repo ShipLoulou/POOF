@@ -1,0 +1,591 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "SUSE", sans-serif;
+  background-image: url("./images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body,
+a {
+  color: #fff;
+}
+
+header {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+}
+header img {
+  height: 90%;
+}
+
+main {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+}
+footer img {
+  height: 70%;
+}
+
+.homepageUserNotLogged header {
+  justify-content: space-between;
+}
+.homepageUserNotLogged header ul {
+  display: flex;
+}
+.homepageUserNotLogged header li {
+  margin-left: 20px;
+}
+.homepageUserNotLogged h1 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.homepageUserNotLogged h2 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.signIn header {
+  justify-content: center;
+  padding: 0 50px;
+}
+.signIn .form-wrapper {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.9098039216);
+  width: 350px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  position: relative;
+}
+.signIn .form-wrapper form {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+.signIn .form-wrapper label {
+  margin: 15px 0 5px 0;
+}
+.signIn .form-wrapper input[type=text],
+.signIn .form-wrapper input[type=email],
+.signIn .form-wrapper input[type=password] {
+  height: 25px;
+  width: 235px;
+  border-radius: 60px;
+  border: none;
+  box-shadow: 1px 1px 2px 2px rgba(98, 140, 255, 0.1058823529);
+  padding: 0 15px;
+}
+.signIn .form-wrapper input[type=submit] {
+  color: #fff;
+  background-color: #303650;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 40px auto 0 auto;
+  padding: 9px 14px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+.signIn .error {
+  position: absolute;
+  background-color: rgba(238, 120, 144, 0.834);
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+  max-width: 230px;
+  padding: 40px 20px 20px 20px;
+  color: crimson;
+  font-weight: 900;
+}
+.signIn .errorContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.signIn .errorContainer span {
+  position: absolute;
+  top: -40px;
+  right: -20px;
+  padding: 10px 10px 50px 80%;
+}
+.signIn h1 {
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.logIn header {
+  justify-content: center;
+  padding: 0 50px;
+}
+.logIn .form-wrapper {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.9098039216);
+  width: 350px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  position: relative;
+}
+.logIn .form-wrapper form {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+.logIn .form-wrapper label {
+  margin: 15px 0 5px 0;
+}
+.logIn .form-wrapper input[type=text],
+.logIn .form-wrapper input[type=email],
+.logIn .form-wrapper input[type=password] {
+  height: 25px;
+  width: 235px;
+  border-radius: 60px;
+  border: none;
+  box-shadow: 1px 1px 2px 2px rgba(98, 140, 255, 0.1058823529);
+  padding: 0 15px;
+}
+.logIn .form-wrapper input[type=submit] {
+  color: #fff;
+  background-color: #303650;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 40px auto 0 auto;
+  padding: 9px 14px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+.logIn .error {
+  position: absolute;
+  background-color: rgba(238, 120, 144, 0.834);
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+  max-width: 230px;
+  padding: 40px 20px 20px 20px;
+  color: crimson;
+  font-weight: 900;
+}
+.logIn .errorContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.logIn .errorContainer span {
+  position: absolute;
+  top: -40px;
+  right: -20px;
+  padding: 10px 10px 50px 80%;
+}
+.logIn h1 {
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.homepageUserLogin header {
+  justify-content: space-between;
+}
+.homepageUserLogin .profil {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.homepageUserLogin .profil h1 {
+  font-size: 44px;
+}
+.homepageUserLogin .profil img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin-right: 50px;
+}
+.homepageUserLogin .profil .modifier {
+  position: relative;
+  left: 100px;
+  padding: 10px;
+}
+.homepageUserLogin .block {
+  margin-top: 20px;
+}
+.homepageUserLogin .block div {
+  background-color: rgba(255, 255, 255, 0.6745098039);
+  width: 500px;
+  height: 100px;
+  border-radius: 15px;
+  margin: 20px 0;
+  color: #000;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.homepageUserLogin .block div:nth-child(2) img {
+  position: relative;
+  left: -36px;
+}
+.homepageUserLogin .block img {
+  height: 70%;
+  margin: 0 20px;
+}
+.homepageUserLogin .block p {
+  position: absolute;
+  left: 130px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #303650;
+}
+
+.homepageUserLoginSetting header {
+  justify-content: space-between;
+}
+.homepageUserLoginSetting .title {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.homepageUserLoginSetting .title a {
+  font-size: 20px;
+  font-weight: 700;
+  padding: 20px;
+  background-color: rgba(48, 54, 80, 0.2117647059);
+  position: absolute;
+  left: -100px;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.homepageUserLoginSetting--main .containerSetting {
+  background-color: rgba(255, 255, 255, 0.6745098039);
+  max-width: 700px;
+  width: 80%;
+  height: 70%;
+  margin: 0 50px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.homepageUserLoginSetting--main .containerSetting h1 {
+  font-size: 23px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.homepageUserLoginSetting--main .containerSetting form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.homepageUserLoginSetting--main .containerSetting form > div {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+}
+.homepageUserLoginSetting--main .containerSetting form > div label {
+  font-size: 18px;
+}
+.homepageUserLoginSetting--main .containerSetting form > div input {
+  padding: 5px 10px;
+  width: 200px;
+}
+.homepageUserLoginSetting--main .containerSetting input[type=submit] {
+  color: #fff;
+  background-color: #303650;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 40px auto 0 auto;
+  padding: 9px 14px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+.homepageUserLoginFriends header {
+  justify-content: space-between;
+}
+.homepageUserLoginFriends--main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  padding: 0 50px;
+  max-width: 1000px;
+  width: 80%;
+  margin: auto;
+}
+.homepageUserLoginFriends--main .containerFriends {
+  grid-column: 1/3;
+  background-color: rgba(255, 255, 255, 0.6745098039);
+  height: 70%;
+  border-radius: 25px;
+}
+.homepageUserLoginFriends--main .containerFriends .title {
+  padding: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.homepageUserLoginFriends--main .containerFriends .title h1 {
+  font-size: 23px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.homepageUserLoginFriends--main .containerFriends .title a {
+  font-size: 20px;
+  font-weight: 700;
+  padding: 15px;
+  background-color: rgba(48, 54, 80, 0.2117647059);
+  position: absolute;
+  left: 10px;
+  text-decoration: none;
+  border-radius: 50%;
+}
+.homepageUserLoginFriends--main .containerFriends .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+.homepageUserLoginFriends--main .containerFriends .content .contentContainer {
+  height: 380px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  overflow: scroll;
+  width: 540px;
+}
+.homepageUserLoginFriends--main .containerFriends .content figure {
+  width: 120px;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
+}
+.homepageUserLoginFriends--main .containerFriends .content figure img {
+  width: 100%;
+  height: 120px;
+  position: relative;
+  z-index: 1;
+  border-radius: 10px 10px 0 0;
+}
+.homepageUserLoginFriends--main .containerFriends .content figure figcaption {
+  position: relative;
+  top: -10px;
+  padding: 15px 10px 5px 10px;
+  background-color: #fff;
+  color: #303650;
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.homepageUserLoginFriends--main .containerMyInfo {
+  grid-column: 3/4;
+  background-color: rgba(255, 255, 255, 0.6745098039);
+  height: 70%;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.homepageUserLoginFriends--main .containerMyInfo img {
+  width: 70%;
+  height: 35%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.homepageUserLoginFriends--main .containerMyInfo p {
+  color: #303650;
+  font-weight: 700;
+  font-size: 20px;
+}
+.homepageUserLoginFriends--main .containerMyInfo a {
+  color: #fff;
+  background-color: #303650;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 40px auto 0 auto;
+  padding: 9px 14px;
+  border-radius: 5px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.homepageUserLoginFriends--main .containerMyInfo form {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+.homepageUserLoginFriends--main .containerMyInfo form label {
+  font-size: 18px;
+}
+.homepageUserLoginFriends--main .containerMyInfo form input {
+  margin-top: 15px;
+  padding: 5px 10px;
+  width: 200px;
+}
+.homepageUserLoginFriends--main .containerMyInfo form input[type=submit] {
+  color: #fff;
+  background-color: #303650;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 40px auto 0 auto;
+  padding: 9px 14px;
+  border-radius: 5px;
+  font-weight: 700;
+}/*# sourceMappingURL=main.css.map */
